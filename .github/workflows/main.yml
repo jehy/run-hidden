@@ -19,8 +19,8 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
+      - name: checkout
       - uses: actions/checkout@v3
-      - name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
         
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v1.1
